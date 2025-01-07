@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>特別研究</title>
-    <link rel="stylesheet" href="main.css"> <!-- CSSファイルへのリンク -->
+    <title>高専ロボコン（2023）</title>
     <style>
+        /* すべての要素のボックスモデルをborder-boxに設定 */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* ページ全体のリセット */
         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* 横スクロールを防止 */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #333;
+            color: #fff;
             display: flex;
-            justify-content: center; /* 水平方向に中央配置 */
-            align-items: center; /* 垂直方向に中央配置 */
-            height: 100vh; /* ビューポートの高さを100%に設定 */
-            margin: 0; /* デフォルトのマージンをリセット */
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .a-container {
+            max-width: 768px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 80px 20px 20px; /* ヘッダーの高さ分（80px）を上部の余白に */
         }
 
         img {
-            max-width: 100%; /* 画面サイズに合わせて画像サイズを縮小 */
-            max-height: 100%; /* 画面サイズに合わせて画像サイズを縮小 */
-            object-fit: contain; /* 画像のアスペクト比を保ちながらサイズを調整 */
+            max-width: 100%; /* 画像の横幅を画面に合わせる */
+            height: auto; /* アスペクト比を維持 */
+            display: block;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -28,12 +61,14 @@
 </header>
 
 <section>
+<div class="a-container">
     <h2>特別研究</h2>
     <p>特別研究とは、高専3年時に行う活動のことです。私たちの年のテーマは「理想の〇〇」を考えるというものでした。
 私たちのグループでは、理想の和食の献立を考えるというテーマで、各自が和食の様々な面からアプローチを行い、最終的には実際の和食を作りました。
 その中でも私は、和食器の面からアプローチを行い、最終的には3Dプリンタで印刷した器に食品安全が保障された漆を塗り、和食の器を作りました。
 
     <img src="tokuken.png" alt="画像1">
+</div>
 </section>
 
 </body>
