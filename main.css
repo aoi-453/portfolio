@@ -16,6 +16,8 @@ header {
     display: flex;
     justify-content: space-around;
     z-index: 1000;
+    height: auto; /* 高さを自動調整 */
+    flex-wrap: wrap; /* 要素が折り返されるように */
 }
 
 header a {
@@ -24,10 +26,24 @@ header a {
     font-family: "Arial", sans-serif;
     text-decoration: none;
     padding: 10px;
+    font-size: 16px; /* スマホ対応で少し小さめに */
 }
 
 header a:hover {
     text-decoration: underline;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* ヘッダー内の要素を縦並び */
+        align-items: center;
+        padding: 15px 10px;
+    }
+
+    section {
+        padding-top: 150px; /* ヘッダー分の余白を追加 */
+    }
 }
 
 section {
